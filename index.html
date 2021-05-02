@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Document</title>
+</head>
+<body>
+ <style>
+    *{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+    }
+      body{
+        font-family: 'Open Sans', sans-serif;
+         }
+  
+    .main{
+        text-align: center;
+        padding:2rem;
+    }
+   /* textarea{
+       width:50%;
+   } */
+   textarea{
+    max-width:50%;
+    height:320px;
+    padding:1rem;
+    resize:none;
+    font-size:1.5rem;
+    color:#353b48;
+  
+}
+   
+    .main{
+       background-size:100% 100%;
+       background:url('bg1.jpg');
+      background-position:center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+     }
+    #container h1{
+      color:#f5f6fa;
+      font-size:2.8rem;
+    }
+    #container p{
+      padding:1rem;
+      color:#f5f6fa;
+      font-size:1.7rem;
+    }
+   .hi{
+     /* column-count: 2; */
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     padding:2rem;
+     width:40%;
+     background:#8c7ae6;
+     margin:auto;
+     }
+     .content{
+       padding:2rem;
+       line-height: 2rem;
+      }
+     .content1 h2{
+       display: flex;
+       justify-content: center;
+  
+     }
+     .content1 p{
+       display: flex;
+       justify-content: center;
+     }
+     /* .main-content{
+       padding:3rem;
+      column-count: 2;
+      line-height: 2rem;
+      background:#f5f6fa;
+     }
+        */
+        .main-content{
+
+            column-count:2;
+            max-width:850px;
+            padding:3rem;
+            margin:auto;
+            justify-content: center;
+            background:#f5f6fa;
+            width:100%;
+             
+         
+        }
+     @media(max-width:552px){
+       .main-content{
+        column-count:1;
+       }
+         .hi{
+           display: flex;
+           flex-direction: column;
+         }
+     }
+  </style>
+ 
+<div class = "main">
+      <div id = "container">
+         <h1>Counting Words is Easy!</h1>
+       <p>Free tool to count words easily</p>
+       <textarea oninput="countwords()" cols="120"  id="word" placeholder = "Type/paste"></textarea>
+
+    <!-- <textarea oninput="countwords()"   id = "word" placeholder ="Type or paste" ></textarea> -->
+</div>
+<div class = "hi">
+ <p id = "show1">Total Characters</p>
+<p id = "show">Total Words</p>
+ <!-- <button onclick = "countwords()" id="btn">Count Words</button> -->
+     </div>
+     </div>
+ <div class = "content">
+   <div class = "content1">
+  <h2>Why would you need a word counting tool?</h2>
+  <p>Online Word Counters are perfect for those who want to keep a count of words and characters. It is a great way to count your words easily.<br> In this counting tool , you don't need to click on traditional button. Simply copy and paste the text!</p>
+</div>
+</div>
+<div class = "main-content">
+  <div class = "content2">
+    <h2>Whom is this word counting tool for?</h2>
+    <p><li>Teachers and Students</li></p>
+    <p>As a student,you will be expected to need a word counting tool for homework or assignments.<br>As a lecturer, you can use this tool to ensure your students’ assignments are the correct length. </p>
+    <p><li>Bloggers or Content Writers</p></li>
+    <p>Counting words are important if you are writing an article or content for someone.For SEO, the ideal blog post length should be 2,100-2,400 words.</li></p>
+    <p><li>Other Uses</p></li>
+    <p>In many work places,you will be expected to write pieces of certain lengths at times.For example,lawyers,secretaries etc.</p>
+  </div>
+  </div>
+
+     
+      <script src = "javascript.js"></script>
+</body>
+</html>
